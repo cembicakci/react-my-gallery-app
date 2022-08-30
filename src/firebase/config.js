@@ -1,3 +1,7 @@
+import * as firebase from "firebase/app";
+import 'firebase/storage' // storage is to store our images
+import 'firebase/firestore' // this is the database
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -15,3 +19,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+const projectStorage = firebase.storage();
+const projectFirestore = firebase.firestore();
+
+export { projectFirestore, projectStorage };
